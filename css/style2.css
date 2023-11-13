@@ -7,6 +7,9 @@ body {
   overflow-x: hidden;
   /* overflow-y: hidden; */
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 @font-face {
   font-family: Lato;
   src: url(../fonts/Lato/Lato-Regular.ttf);
@@ -105,6 +108,7 @@ p {
   font-size: 18px;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 }
 .dark-button {
   width: 140px;
@@ -116,6 +120,7 @@ p {
   font-size: 16px;
   text-transform: uppercase;
   border: 1px solid #FFB800;
+  cursor: pointer;
 }
 .block {
   margin-top: 119px;
@@ -170,11 +175,6 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.scroll-line {
-  border-radius: 99px;
-  border: none;
-  border-top: 1px solid white;
-}
 .scroller-img {
   height: 30px;
   width: 30px;
@@ -197,7 +197,7 @@ p {
   border-left: 1px solid white;
   height: 120px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .player {
   position: absolute;
@@ -250,7 +250,7 @@ p {
 .header__logo-p-bottom {
   color: #FFF;
   text-align: right;
-  font-family: Poppins;
+  font-family: Poppins-Light;
   font-size: 14px;
   letter-spacing: 0.42px;
 }
@@ -368,6 +368,7 @@ p {
   margin-top: 20px;
   border-radius: 10px;
   margin-right: 20px;
+  cursor: pointer;
 }
 .aboutus-download-img.g {
   width: 151px;
@@ -500,7 +501,7 @@ p {
   letter-spacing: 2px;
 }
 .musicvideo-text-bottom {
-  margin-top: 27px;
+  margin-top: 6px;
   color: #FFF;
   text-align: center;
   font-family: Lato-Black;
@@ -547,7 +548,7 @@ p {
   border-top: 1px solid white;
   border-width: 0.5px;
   border-color: #A1A1A1;
-  margin: 30px 0;
+  margin: 28px 0;
 }
 .events-date {
   color: #FFB800;
@@ -587,7 +588,7 @@ p {
   opacity: 0.3;
 }
 .next-event-text-top {
-  margin-bottom: 25px;
+  margin-bottom: 6px;
   text-align: center;
 }
 .next-event-text-middle {
@@ -596,7 +597,7 @@ p {
   font-family: Lato-Bold;
   font-size: 52px;
   letter-spacing: 5.2px;
-  margin-bottom: 62px;
+  margin-bottom: 46px;
 }
 .next-event-timer {
   margin-top: 25px;
@@ -649,7 +650,7 @@ p {
   width: 417px;
   height: 500px;
   background-color: #231009;
-  filter: drop-shadow(0px 0px 45px rgba(0, 0, 0, 0.5));
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: flex-end;
 }
@@ -673,6 +674,7 @@ p {
   color: #FFB800;
   margin-top: 5px;
   text-align: center;
+  font-family: Poppins-ExtraLight;
 }
 .artist-item-text-top {
   color: white;
@@ -688,6 +690,7 @@ p {
   height: 750px;
   margin-top: 60px;
   background: url(../img/contacts.jpg) 100% 6% / cover no-repeat;
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: -2;
   display: flex;
@@ -765,6 +768,7 @@ p {
 }
 .news-info {
   margin-right: 12px;
+  font-family: Poppins-ExtraLight;
 }
 .block-booking {
   margin-top: 120px;
@@ -778,6 +782,9 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.booking-img .black-bg {
+  opacity: 0.55;
 }
 .booking-form {
   margin-top: 60px;
@@ -859,8 +866,7 @@ p {
   color: #231009;
   text-align: right;
   font-family: Poppins;
-  font-size: 14px;
-  letter-spacing: 0.42px;
+  font-size: 17px;
 }
 .line4 {
   border-radius: 99px;
