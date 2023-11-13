@@ -5,21 +5,26 @@
 body {
   background-color: #231009;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 @font-face {
   font-family: Lato;
   src: url(../fonts/Lato/Lato-Regular.ttf);
 }
 @font-face {
-  font-family: Lato-Bold;
+  font-family: Lato-Black; /*Lato-Bold*/
   src: url(../fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+  font-family: Lato-Bold;
+  src: url(../fonts/Lato/Lato-Bold.ttf);
 }
 @font-face {
   font-family: Lato-Thin;
   src: url(../fonts/Lato/Lato-Light.ttf);
 }
 @font-face {
-  font-family: Poppins;
+  font-family: Poppins-SemiBold; /* Poppins */
   src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
 }
 @font-face {
@@ -27,12 +32,16 @@ body {
   src: url(../fonts/Poppins/Poppins-Bold.ttf);
 }
 @font-face {
-  font-family: Poppins-Thin;
+  font-family: Poppins; /*Poppins-thin*/
   src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
 @font-face {
-  font-family: Poppins-Thinnest;
+  font-family: Poppins-Light; /*Poppins-Thinnest*/
   src: url(../fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: Poppins-ExtraLight;
+  src: url(../fonts/Poppins/Poppins-ExtraLight.ttf);
 }
 @font-face {
   font-family: Stencil;
@@ -70,21 +79,21 @@ h4 {
 }
 h5 {
   color: #FFB800;
-  font-family: Poppins-Thin;
+  font-family: Poppins-ExtraLight;
   font-size: 20px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 h6 {
   color: #FFB800;
-  font-family: Poppins-Thinnest;
+  font-family: Poppins-Light;
   font-size: 18px;
   letter-spacing: 0.9px;
   text-transform: uppercase;
 }
 p {
   color: #A1A1A1;
-  font-family: Poppins-Thin;
+  font-family: Poppins-Light;
   font-size: 16px;
 }
 .def-button {
@@ -92,7 +101,7 @@ p {
   background-color: #FFB800;
   color: #3A180E;
   text-align: center;
-  font-family: Poppins;
+  font-family: Poppins-SemiBold;
   font-size: 18px;
   text-transform: uppercase;
   border: none;
@@ -103,10 +112,16 @@ p {
   background-color: transparent;
   color: #FFB800;
   text-align: center;
-  font-family: Poppins;
+  font-family: Poppins-SemiBold;
   font-size: 16px;
   text-transform: uppercase;
   border: 1px solid #FFB800;
+}
+.block {
+  margin-top: 119px;
+}
+.block.f {
+  margin-top: 120px;
 }
 .container {
   width: 1350px;
@@ -118,7 +133,7 @@ p {
   width: inherit;
   z-index: -1;
   background-color: #000;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .scroll-bar {
   width: 81px;
@@ -138,18 +153,18 @@ p {
   position: absolute;
   z-index: -2;
   height: 950px;
-  width: 100%;
+  width: 100vw;
   background: url(../img/main_bg.png) no-repeat;
   background-size: cover;
 }
 .social-media {
   position: absolute;
   top: 255px;
-  left: 50px;
+  left: 44px;
 }
 .scroller {
   position: absolute;
-  bottom: 100px;
+  bottom: 117px;
   right: 50px;
   display: flex;
   flex-direction: column;
@@ -167,7 +182,7 @@ p {
 }
 .scroller-numbers {
   color: #FFF;
-  font-family: Poppins;
+  font-family: Poppins-SemiBold;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -187,7 +202,7 @@ p {
 .player {
   position: absolute;
   bottom: 15px;
-  left: 20px;
+  left: 14px;
   display: flex;
 }
 .player-text {
@@ -197,12 +212,13 @@ p {
 }
 .player-top-text {
   color: #FFF;
-  font-family: Poppins-Thinnest;
+  font-family: Poppins-ExtraLight;
   font-size: 14px;
+  margin-bottom: 4px;
 }
 .player-bottom-text {
   color: #FFF;
-  font-family: Poppins-Thin;
+  font-family: Poppins;
   font-size: 14px;
 }
 .header {
@@ -234,7 +250,7 @@ p {
 .header__logo-p-bottom {
   color: #FFF;
   text-align: right;
-  font-family: Poppins-Thin;
+  font-family: Poppins;
   font-size: 14px;
   letter-spacing: 0.42px;
 }
@@ -242,18 +258,26 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  width: 70.5%;
 }
 .nav-item {
+  position: relative;
   font-family: Lato;
   font-size: 18px;
-  text-transform: uppercase;
   text-decoration: none;
   color: white;
 }
+.nav-item-underline {
+  position: absolute;
+  margin-top: 9px;
+  border: none;
+  width: 55%;
+}
+.nav-item.active .nav-item-underline{
+  border-bottom: 1px solid #FFB800;
+}
 .nav-item.active {
   color: #FFB800;
-  border-bottom: 1px solid #FFB800;
 }
 .header__nav {
   display: flex;
@@ -279,10 +303,11 @@ p {
 }
 .content-main .main-text1 {
   color: #FFB800;
-  text-align: center;
-  font-family: Poppins;
+  /* text-align: center; */
+  font-family: Poppins-SemiBold;
   font-size: 32px;
   letter-spacing: 12.8px;
+  margin-bottom: 5px;
 }
 .content-main .main-text2 {
   color: #FFF;
@@ -299,8 +324,11 @@ p {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px white;
 }
+.content-main .def-button {
+  margin-top: 20px;
+}
 .block-aboutus {
-  margin-top: 121px;
+  /* margin-top: 121px; */
 }
 .content-aboutus {
   display: flex;
@@ -380,13 +408,13 @@ p {
   margin-top: 120px;
 }
 .title {
-  padding-top: 29px;
+  /* padding-top: 29px; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .title-text-top {
-  margin-top: 45px;
+  margin-top: 16px;
 }
 .title-text-bottom {
   margin-top: 5px;
@@ -394,10 +422,8 @@ p {
 .title-line {
   border-radius: 99px;
   border: none;
-  border-top: 1px solid white;
-  width: 58px;
-  border-width: 2px;
-  transform: rotate(90deg);
+  border-left: 2px solid white;
+  height: 60px;
 }
 .content-discography {
   display: flex;
@@ -420,6 +446,7 @@ p {
   filter: drop-shadow(0px 0px 45px rgba(0, 0, 0, 0.5));
   width: 400px;
   height: 500px;
+  margin-bottom: 20px;
 }
 .disc-item-photo.first {
   background: url(../img/disc_photo_1.jpeg) 8% 100% / cover no-repeat;
@@ -438,6 +465,10 @@ p {
 }
 .disc-item-text-top {
   color: #FFB800;
+  font-family: Poppins;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  margin-bottom: 3px;
 }
 .disc-item-text-bottom {
   color: white;
@@ -469,10 +500,10 @@ p {
   letter-spacing: 2px;
 }
 .musicvideo-text-bottom {
-  margin-top: 5px;
+  margin-top: 27px;
   color: #FFF;
   text-align: center;
-  font-family: Lato-Bold;
+  font-family: Lato-Black;
   font-size: 52px;
   letter-spacing: 5.2px;
 }
@@ -520,7 +551,7 @@ p {
 }
 .events-date {
   color: #FFB800;
-  font-family: Poppins-Thin;
+  font-family: Poppins;
   font-size: 16px;
   letter-spacing: 0.8px;
   margin-bottom: 3px;
@@ -534,7 +565,7 @@ p {
 }
 .events-country {
   color: #FFF;
-  font-family: Poppins-Thin;
+  font-family: Poppins-ExtraLight;
   font-size: 14px;
   letter-spacing: 0.7px;
 }
@@ -556,7 +587,7 @@ p {
   opacity: 0.3;
 }
 .next-event-text-top {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
   text-align: center;
 }
 .next-event-text-middle {
@@ -565,7 +596,7 @@ p {
   font-family: Lato-Bold;
   font-size: 52px;
   letter-spacing: 5.2px;
-  margin-bottom: 46px;
+  margin-bottom: 62px;
 }
 .next-event-timer {
   margin-top: 25px;
@@ -595,7 +626,7 @@ p {
 .next-event-time-cell-number {
   color: #FFB800;
   text-align: center;
-  font-family: Lato-Bold;
+  font-family: Lato-Black;
   font-size: 52px;
   letter-spacing: 5.2px;
   margin-bottom: 2px;
@@ -650,7 +681,7 @@ p {
   text-align: center;
 }
 .block-contacts {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 .contacts-img {
   width: 100%;
@@ -672,6 +703,9 @@ p {
   justify-content: flex-end;
   border-left: 0.5px solid white;
 }
+.contacts-cell.f {
+  border: none;
+}
 .contacts-text-top {
   margin-bottom: 10px;
 }
@@ -679,7 +713,7 @@ p {
   margin-bottom: 15px;
 }
 .block-news {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 .news-content {
   display: flex;
@@ -691,6 +725,7 @@ p {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 60px;
+  margin-top: 60px;
 }
 .news-item {
   width: 417px;
@@ -709,7 +744,7 @@ p {
 }
 .news-text-top {
   color: #FFB800;
-  font-family: Poppins-Thinnest;
+  font-family: Poppins-Light;
   font-size: 16px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -732,7 +767,7 @@ p {
   margin-right: 12px;
 }
 .block-booking {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 .booking-img {
   width: 1350px;
@@ -823,7 +858,7 @@ p {
 .footer__logo-p-bottom {
   color: #231009;
   text-align: right;
-  font-family: Poppins-Thin;
+  font-family: Poppins;
   font-size: 14px;
   letter-spacing: 0.42px;
 }
@@ -863,7 +898,7 @@ p {
 }
 .footer__subscribe-field::placeholder {
   color: #231009;
-  font-family: Poppins-Thinnest;
+  font-family: Poppins-Light;
   font-size: 14px;
   letter-spacing: 0.7px;
 }
@@ -893,13 +928,13 @@ p {
 }
 .footer__copyright {
   color: #231009;
-  font-family: Lato;
+  font-family: Lato-Bold;
   font-size: 16px;
   letter-spacing: 0.8px;
 }
 .footer__bottom-text {
   color: #231009;
-  font-family: Lato;
+  font-family: Lato-Bold;
   font-size: 16px;
   text-decoration: none;
 }
