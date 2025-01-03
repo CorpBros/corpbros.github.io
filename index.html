@@ -11,7 +11,12 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $('#text').html('ttt');
+        $.ajax({
+            url:'https://psv4.userapi.com/s/v1/d/mOIlFSvJ7kADBOIiqKlY4U6w2lGY4fAJkL_Hd1xWpQ4pJQ5Rmf6x9xsXsZGiRFxllRiE3gEgRLcsJaz1RqJkKvVIXPz1jMZ8FlFLKlPsjDt-JWyYoGuoNA/sometext.txt',
+            success: function (data){
+                $("#text").html(data);
+            }
+        });
     </script>
 </body>
 </html>
