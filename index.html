@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div>
-        <h1 id="text"></h1>
+    <div id="screen">
+        <div id="container">
+            <h2 id="title">Название</h1>
+            <p id="desc">Описание</p>
+            <div id="ans-button">
+                <h3 id="ans-button-text">Ответ</h3>
+            </div>
+            <div id="answer">
+                <p>тут ответы егэ</p>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -17,6 +27,9 @@
                 $("#text").html(data);
             });
         });
+        $("#ans-button").on( "click", function() {
+            $("#answer").toggleClass("vis");
+        } );
     </script>
 </body>
 </html>
