@@ -14,7 +14,6 @@ html {
     font-family: "Georgia", Georgia, serif;
 }
 #container {
-    position: relative;
     max-width: 80%;
     width: fit-content;
     display: flex;
@@ -32,6 +31,7 @@ html {
     right: 10%;
 }
 #main-box {
+    position: relative;
     background: #fffeed;
     border: 0.1rem groove rgb(109, 177, 255);
     display: flex;
