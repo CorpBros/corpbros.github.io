@@ -2,35 +2,83 @@
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family: pixel;
+    src: url('/fonts/Puzzle-Tale-Pixel-Regular.ttf');
+}
 html {
     image-rendering: pixelated;
 }
 #screen {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: ms Ui gothic;
+    font-family: "Georgia", Georgia, serif;
 }
 #container {
-    width: 80%;
+    max-width: 80%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+#main-box {
+    background: #fffeed;
+    border: 0.1rem groove rgb(109, 177, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#second-box {
+    background: #fffeed;
+    border: 0.1rem groove rgb(109, 177, 255);
 }
 #ans-button {
     background-color: rgb(179, 179, 179);
     width: fit-content;
     padding: .5rem 1rem;
+    margin: 1rem;
     display: flex;
     align-items: center;
-    border-style: outset;
     cursor: pointer;
     user-select: none;
+    background: linear-gradient(180deg, white 45%, #dbdbdb 55%);
+    box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #aba4a6;
 }
 #ans-button-text {
+    text-decoration: underline;
 }
-#answer {
+#title-box {
+    width: 100%;
+    padding: .5rem;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(255, 0, 47, 50%) 0%, 
+                                        rgba(255, 174, 0, 50%) 16%, 
+                                        rgba(229, 255, 0, 50%) 32%, 
+                                        rgba(60, 255, 0, 50%) 48%, 
+                                        rgba(0, 179, 255, 50%) 64%, 
+                                        rgba(0, 38, 255, 50%) 80%, 
+                                        rgba(136, 0, 255, 50%) 100%);
+}
+#desc-box {
+    width: 100%;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+#answer-box {
+    width: 100%;
+    padding: .5rem;
+    box-sizing: border-box;
+}
+#second-box {
     visibility: hidden;
 }
-#answer.vis {
+#second-box.vis {
     visibility: visible;
 }

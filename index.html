@@ -9,26 +9,46 @@
 <body>
     <div id="screen">
         <div id="container">
-            <h2 id="title">Название</h1>
-            <p id="desc">Описание</p>
-            <div id="ans-button">
-                <h3 id="ans-button-text">Ответ</h3>
+            <div id="main-box">
+                <div id="title-box">
+                    <h2 id="title">Название</h1>
+                </div>
+                <div id="desc-box">
+                    <p id="desc">Описание</p>
+                </div>
+                <div id="ans-button">
+                    <h3 id="ans-button-text">Ответ</h3>
+                </div>
             </div>
-            <div id="answer">
-                <p>тут ответы егэ</p>
+            <div id="second-box">
+                <div id="answer-box">
+                    <p id="answer">тут ответы егэ</p>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        const PATH = '/problems.txt';
+        let filePath = '/problems.json';
         $(document).ready(function() {
-            $.get(PATH, function(data) {
-                $("#text").html(data);
+            $.getJSON(filePath, function( data ) {
+                
+                let ran = Math.floor(Math.random() * data.length);
+                //ran = 845 //long
+                let ran_problem = data[ran];
+
+                title = ran_problem['title'];
+                problem = ran_problem['problem'];
+                answer = ran_problem['answer'];
+                
+                $("#title").html(title);
+                $("#desc").html(problem);
+                $("#answer").html(answer);
+                
             });
         });
         $("#ans-button").on( "click", function() {
-            $("#answer").toggleClass("vis");
+            $("#second-box").toggleClass("vis");
         } );
     </script>
 </body>
