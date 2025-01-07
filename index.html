@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div id="bg"></div>
     <div id="screen">
         <div id="container">
             <div id="main-box">
@@ -35,7 +36,7 @@
             $.getJSON(filePath, function( data ) {
                 
                 let ran = Math.floor(Math.random() * data.length);
-                //ran = 845 //long
+                ran = 845 //long
                 let ran_problem = data[ran];
 
                 title = ran_problem['title'];
