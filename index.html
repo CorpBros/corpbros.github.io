@@ -4,54 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div id="bg"></div>
-    <div id="screen">
-        <div id="container">
-            <div id="main-box">
-                <img id="cat" src="/cat.gif" alt="cat">
-                <div id="title-box">
-                    <h2 id="title">Название</h1>
-                </div>
-                <div id="desc-box">
-                    <p id="desc">Описание</p>
-                </div>
-                <div id="ans-button">
-                    <h3 id="ans-button-text">Ответ</h3>
-                </div>
-            </div>
-            <div id="second-box">
-                <div id="answer-box">
-                    <p id="answer">тут ответы егэ</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        let filePath = '/problems.json';
-        $(document).ready(function() {
-            $.getJSON(filePath, function( data ) {
-                
-                let ran = Math.floor(Math.random() * data.length);
-                ran = 845 //long
-                let ran_problem = data[ran];
-
-                title = ran_problem['title'];
-                problem = ran_problem['problem'];
-                answer = ran_problem['answer'];
-                
-                $("#title").html(title);
-                $("#desc").html(problem);
-                $("#answer").html(answer);
-                
-            });
-        });
-        $("#ans-button").on( "click", function() {
-            $("#second-box").toggleClass("vis");
-        } );
-    </script>
+    hi
 </body>
 </html>
